@@ -3,10 +3,10 @@ version: "3.7"
 services:
 
   database:
-    image: mysql:5.7  
+    image: mysql:8.0-oracle
     container_name: database 
     environment:
-      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_ROOT_PASSWORD: P123456p
       MYSQL_DATABASE: bookstore_db
       MYSQL_USER: clarusway
       MYSQL_PASSWORD: Clarusway_1
@@ -14,7 +14,7 @@ services:
       - clarusnet
 
   myapp:
-    image: bookstore-api:latest
+    image: emregllce/bookstore-api:latest
     container_name: myapp
     restart: always
     depends_on:
